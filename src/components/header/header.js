@@ -4,7 +4,7 @@ import "./header.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
-import Cart from "../cart/cart";
+import CartIcon from "../cart-icon/cart-icon";
 import CartPopup from "../cart-popup/cart-popup";
 
 const Header = ({ currentUser, cartHidden }) => {
@@ -35,7 +35,7 @@ const Header = ({ currentUser, cartHidden }) => {
             LOGIN
           </Link>
         )}
-        <Cart />
+        <CartIcon />
       </div>
       {cartHidden ? null : <CartPopup />}
     </div>
